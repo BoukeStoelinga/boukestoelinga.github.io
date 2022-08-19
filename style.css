@@ -29,9 +29,12 @@
     background-color: rgb(46, 139, 86);
     border-radius: 20px;
 }
-/* #active-page{
-
-} */
+label {
+    font-size: 20px;
+}
+.slider {
+    background: #000;
+}
 .canvas{
     background-color: antiquewhite;
     width:400px;
