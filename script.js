@@ -93,7 +93,7 @@ const executeIntegration = function () {
   running = true;
   lastState = [getAngle(), 0];
   let i = 0;
-  let input = 0;
+  
   let reference = getReference();
   let Kp = getKp()
   let Ki = getKi()
@@ -123,7 +123,6 @@ const executeIntegration = function () {
     integral = Ki*errorIntegral
     input = proportional+derivative+integral
     
-    console.log(input)
     let newState = rungeKuttaFourStep(lastState, input, timestep);
 
     setAngle(newState[0]);
@@ -132,7 +131,7 @@ const executeIntegration = function () {
   };
   setInterval(runFunc, 5);
 };
-
+let input = 0;
 const rod = document.getElementById("rodid");
 const referenceRod = document.getElementById("referencerodid");
 const canvas = document.getElementsByClassName("canvas")[0];
