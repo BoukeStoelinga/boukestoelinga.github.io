@@ -41,6 +41,7 @@ label {
     height:400px;
     margin-top: 50px;
     float: left;
+    border-radius: 200px;
 }
 #chart1{
     background-color: white;
@@ -74,7 +75,7 @@ label {
     width:0px;
     border-left:3px dotted red;
     height: 175px;
-    margin: 25px 200px 195px 195px;
+    margin: 25px 200px 197px 197px;
     z-index: 9;
     position: absolute;
     transform-origin: 50% 100%;
