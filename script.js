@@ -14,13 +14,7 @@ for (let menuItem of menuItems) {
   // console.log(menuItem)
   menuItem.addEventListener("click", changeBackground);
 }
-const rod = document.getElementById("rodid");
-const referenceRod = document.getElementById("referencerodid");
-const canvas = document.getElementsByClassName("canvas")[0];
-const referenceSlider = document.getElementById('reference')
-const Kpelement = document.getElementById('Kp')
-const Kdelement = document.getElementById('Kd')
-const Kielement = document.getElementById('Ki')
+
 
 const setAngle = function (newAngle) {
   rod.style.transform = `rotate(${newAngle}rad)`;
@@ -138,4 +132,12 @@ const executeIntegration = function () {
   };
   setInterval(runFunc, 5);
 };
+
+const rod = document.getElementById("rodid");
+const referenceRod = document.getElementById("referencerodid");
+const canvas = document.getElementsByClassName("canvas")[0];
+const referenceSlider = document.getElementById('reference')
+const Kpelement = document.getElementById('Kp')
+const Kdelement = document.getElementById('Kd')
+const Kielement = document.getElementById('Ki')
 executeIntegration();

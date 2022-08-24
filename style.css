@@ -36,7 +36,7 @@ label {
     background: #000;
 }
 .canvas{
-    background-color: antiquewhite;
+    background-color: white;
     width:400px;
     height:400px;
     margin-top: 50px;
@@ -52,7 +52,7 @@ label {
     transform: rotate(-0.7rad);
 }
 #referencerodid{
-    background-color: antiquewhite;
+    background-color: white;
     width:0px;
     border-left:3px dotted red;
     height: 175px;
