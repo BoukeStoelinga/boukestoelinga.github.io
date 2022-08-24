@@ -13,7 +13,6 @@ const updateAngleGraph = function () {
 
   inputdata.datasets[0].data.shift()
   inputdata.labels.shift();
-  console.log(inputdata.datasets[0].data)
   // console.log(data.datasets[0].data)
 };
 
@@ -94,5 +93,5 @@ const config2 = {
   };
 const myChart = new Chart(document.getElementById("myChart1"), config);
 const myChart2 = new Chart(document.getElementById("myChart2"), config2);
-setInterval(updateAngleGraph, 5);
+setInterval(updateAngleGraph, 50);
 
