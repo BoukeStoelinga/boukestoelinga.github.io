@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Control-Website</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>PID controller website</h1>
+      <ul class="header-list">
+        <li class="menu-item" id="active-menu-item"><a href="#">PID</a></li>
+        <li class="menu-item"><a href="./html/LQR.html">LQR</a></li>
+        <li class="menu-item"><a href="#poleplacement">Pole-placement</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>PID-controller</h1>
+      <p>Set the parameters for the PID controller</p>
+      <form name="PID controls" action="" method="get">
+        <label for="reference">Set reference</label>
+        <input
+          type="range"
+          name="reference"
+          class="slider"
+          id="reference"
+          min="-3.1415"
+          max="3.1415"
+          step="0.001"
+          value="0"
+        />
+        <div>
+          <label for="Kp">Set proportional constant (Kp)</label>
+          <input
+            type="range"
+            class="slider"
+            name="Kp"
+            id="Kp"
+            min="0"
+            max="30"
+            step="0.05"
+            value="0"
+          />
+        </div>
+        <div>
+            <label for="Kd">Set derivative constant (Kd)</label>
+            <input
+              type="range"
+              name="Kd"
+              class="slider"
+              id="Kd"
+              min="0"
+              max="5"
+              step="0.05"
+              value="0"
+            />
+          </div>
+          <div>
+            <label for="Ki">Set integral constant (Ki)</label>
+            <input
+              type="range"
+              name="Ki"
+              class="slider"
+              id="Ki"
+              min="0"
+              max="0.25"
+              step="0.001"
+              value="0"
+            />
+          </div>
+      </form>
+      <div>
+      <div class="canvas">
+        <div class="rod" id="rodid"></div>
+        <div class="referencerod" id="referencerodid"></div>
+      </div>
+      <div id="chart1">
+      <canvas id="myChart1" width="600" height="185" responsive="false"></canvas>
+    </div>
+    <div id="chart2">
+      <canvas id="myChart2" width="600" height="185"></canvas>
+    </div>
+    </div>
+  </div>
+  </body>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/chartmaker.js"></script>
+</html>
