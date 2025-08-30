@@ -12,6 +12,24 @@
   margin: 0;
   padding: 0;
 }
+#start-btn{
+  font-size: 2rem;
+  font-family: 'Creepster', cursive, helvetica, sans-serif;
+  color: #ffffff;
+  background: #ac0c0c;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+#start-btn:hover {
+  background: #e77575;
+}
 .days {
   font-size: 4rem;
   color: #ac0c0c;
@@ -34,7 +52,7 @@
 
 body {
   position: relative;
-  background: linear-gradient(120deg, #181818 0%, #2b2a2a 100%);
+  background: url("image.png") center center/cover no-repeat transparent;
   color: #cccccc;
   font-family: 'Creepster', cursive, helvetica, sans-serif;
   min-height: 100vh;
@@ -43,6 +61,7 @@ body {
   overflow-x: hidden;
 
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #bbbbbb;
