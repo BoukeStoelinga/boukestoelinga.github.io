@@ -13,7 +13,7 @@ function startCountdown() {
 }
 
 function updateCountdown() {
-    const targetDate = new Date(new Date().getFullYear(), 8, 3); // September is month 8 (0-based)
+    const targetDate = new Date(new Date().getFullYear(), 8, 5, 18, 0, 0); // September is month 8 (0-based), 5th day, 18:00
     const now = new Date();
     let diff = targetDate - now;
     const countdownDiv = document.getElementById('countdown');
