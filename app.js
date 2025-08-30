@@ -13,37 +13,25 @@ function startCountdown() {
 }
 
 function updateCountdown() {
-    const targetDate = new Date(new Date().getFullYear(), 8, 5, 18, 0, 0); // September is month 8 (0-based), 5th day, 18:00
-    const now = new Date();
-    let diff = targetDate - now;
-    const countdownDiv = document.getElementById('countdown');
-    if (diff < 0) {
-        countdownDiv.textContent = "Countdown finished!";
-        return;
-    }
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    // Pad hours, minutes, seconds with one leading zero
-    const paddedDays = days < 10 ? '0' + days : days.toString();
-    const paddedHours = hours < 10 ? '0' + hours : hours.toString();
-    const paddedMinutes = minutes < 10 ? '0' + minutes : minutes.toString();
-    const paddedSeconds = seconds < 10 ? '0' + seconds : seconds.toString();
-
-    // Combine all digits and separators
-    const timeStr = `${paddedDays}:${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
-    let html = '<div id="time">';
-    for (let char of timeStr) {
-        if (char === ':') {
-            html += `<div class="separator">:</div>`;
-        } else {
-            html += `<div class="digit">${char}</div>`;
-        }
-    }
-    html += '</div>';
-    countdownDiv.innerHTML = html;
+const targetDate = new Date(new Date().getFullYear(), 8, 5, 18, 0, 0, 0); // September is month 8 (0-based), 5th day, 18:00
+  const now = new Date();
+  let diff = targetDate - now;
+  const countdownDiv = document.getElementById('countdown');
+  if (diff < 0) {
+    countdownDiv.textContent = "Countdown finished!";
+    return;
+  }
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+  // Pad hours, minutes, seconds with one leading zero
+  const paddedDays = days < 10 ? '0' + days : days;
+  const paddedHours = hours < 10 ? '0' + hours : hours;
+  const paddedMinutes = minutes < 10 ? '0' + minutes : minutes;
+  const paddedSeconds = seconds < 10 ? '0' + seconds : seconds;
+  countdownDiv.innerHTML =
+    `<div id="time">${paddedDays}:${paddedHours}:${paddedMinutes}:${paddedSeconds}</div>`;
 }
 
 let nextSoundTime = Date.now() + 10000 + Math.floor(Math.random() * 10000 - 5000);

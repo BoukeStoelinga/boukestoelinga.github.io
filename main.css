@@ -59,6 +59,12 @@
 }
 .digit, .separator {
   display: inline-block;
+  font-variant-numeric: tabular-nums;
+  max-width: 3.5em;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 body {
