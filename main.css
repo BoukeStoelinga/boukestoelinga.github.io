@@ -80,6 +80,16 @@ body {
 }
 
 
+
+/* Style for myst images placed by JS */
+body > img[src^="./myst"] {
+  position: absolute !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: -1 !important;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   color: #bbbbbb;
   text-shadow: 0 0 10px #000, 0 0 5px #444;
