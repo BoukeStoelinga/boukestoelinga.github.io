@@ -12,7 +12,8 @@
   margin: 0;
   padding: 0;
 }
-#start-btn{
+#start-btn,
+#ready-btn {
   font-size: 2rem;
   font-family: 'Creepster', cursive, helvetica, sans-serif;
   color: #ffffff;
@@ -27,9 +28,12 @@
   transform: translate(-50%, -50%);
   border-radius: 1rem;
 }
-#start-btn:hover {
+#start-btn:hover,
+#ready-btn:hover {
   background: #e77575;
 }
+
+
 .days {
   font-size: 4rem;
   color: #ac0c0c;
@@ -67,6 +71,31 @@
   white-space: nowrap;
 }
 
+#instabutton {
+  font-size: 0.5rem;
+  font-family: 'Creepster', cursive, helvetica, sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #ac0c0c 60%, #e77575 100%);
+  border: 2px solid #e77575;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 25px #ac0c0c, 0 0 8px #000 inset;
+  border-radius: 1.2rem;
+  text-shadow: 0 0 10px #000, 0 0 5px #e77575;
+  letter-spacing: 0.15em;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+#instabutton:hover {
+  background: linear-gradient(135deg, #e77575 60%, #ac0c0c 100%);
+  box-shadow: 0 0 40px #e77575, 0 0 12px #000 inset;
+  color: #fff;
+  transform: translate(-50%, -50%) scale(1.08) rotate(-2deg);
+}
 body {
   position: relative;
   background: url("image.png") center center/cover no-repeat transparent;
